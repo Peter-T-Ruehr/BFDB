@@ -2,8 +2,8 @@
 .Rhistory
 .RData
 .Ruserdata
-BFDB
 _bkp
 _notes_create_db_and_overview_table.txt
 tables
 workspaces
+**/BFDB_app/BFDB/data
