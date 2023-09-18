@@ -6,6 +6,7 @@ library(ggplot2)
 library(plotly)
 library(viridisLite)
 library(scales)
+library(ggExtra)
 library(dplyr)
 # setwd("C:/tmp/BFDB/BFDB_app/BFDB")
 
@@ -203,7 +204,7 @@ server <-  function(input, output, session) {
       annotation_logticks() 
     
     # p1
-    p1.body.l.hist.regular <- ggExtra::ggMarginal(p1, type = "histogram")
+    p1.body.l.hist.regular <- ggMarginal(p1, type = "histogram")
     p1.body.l.hist.regular
   })
   
@@ -222,7 +223,7 @@ server <-  function(input, output, session) {
       annotation_logticks() 
     
     # p1
-    p1.body.l.hist.regular <- ggExtra::ggMarginal(p1, type = "histogram")
+    p1.body.l.hist.regular <- ggMarginal(p1, type = "histogram")
     p1.body.l.hist.regular
   })
   
