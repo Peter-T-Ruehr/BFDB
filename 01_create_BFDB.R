@@ -7,7 +7,7 @@ library(readr)
 library(tidyverse)
 
 # create a new SQLite database, supply the filename to dbConnect():
-db <- dbConnect(SQLite(), "BFDF")
+db <- dbConnect(SQLite(), "BFDB")
 
 # load overview
 iBite <- read_csv("./tables/iBite_table.csv",
@@ -48,7 +48,7 @@ overview <- iBite %>%
          uploaded_by = "P.T. Rühr",
          unit_x = "ms",
          unit_y = "N",
-         method = "forceX;forceR",
+         setup = "forceX;forceR",
          repository = "Zenodo",
          repository_doi = "10.5281/zenodo.8183211") %>% 
   rename(y_max = max.bf.iBite,
@@ -70,7 +70,8 @@ overview <- iBite %>%
          collection_long = round(collection_long, 6),
          y_max = round(y_max, 3),
          tax_class = "Insecta",
-         tax_phylum = "Arthropoda")
+         tax_phylum = "Arthropoda",
+         method = "in_vivo")
 
 overview$x_count <- NA
 overview$step_size <- NA
