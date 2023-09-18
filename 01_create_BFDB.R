@@ -7,7 +7,7 @@ library(readr)
 library(tidyverse)
 
 # create a new SQLite database, supply the filename to dbConnect():
-db <- dbConnect(SQLite(), "BFDB")
+db <- dbConnect(SQLite(), "BFDB_sql")
 
 # load overview
 iBite <- read_csv("./tables/iBite_table.csv",

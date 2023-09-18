@@ -23,7 +23,7 @@ readData <<- function(session) {
   progress$set(value = 0.1, message = 'Loading BF databank...')
   
   # databank loading
-  db <- dbConnect(SQLite(), dbname = "./data/BFDB")
+  db <- dbConnect(SQLite(), dbname = "./data/BFDB_sql")
   
   overview <<- dbReadTable(db, "overview") %>% 
     as_tibble() %>% 

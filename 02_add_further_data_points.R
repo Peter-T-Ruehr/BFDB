@@ -16,7 +16,7 @@ str_split_mult <- function(x, pattern, position = 1){
 }
 
 # create a new SQLite database, supply the filename to dbConnect():
-db <- dbConnect(SQLite(), "BFDB")
+db <- dbConnect(SQLite(), "BFDB_sql")
 
 # load Isip 2022
 BF_Isip <- read_csv("./tables/Isip 2022 - max_bf.csv",
