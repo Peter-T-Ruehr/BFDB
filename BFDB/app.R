@@ -13,6 +13,7 @@ library(dplyr)
 addResourcePath(prefix = "data", directoryPath = "./data/")
 addResourcePath(prefix = "images", directoryPath = "./images/")
 
+regression.data <<- NULL
 overiew <<- NULL
 measurements <<-NULL
 map.data <<- NULL
